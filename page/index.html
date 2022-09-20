@@ -60,7 +60,7 @@
       
       let ua = window.navigator.userAgent.toLowerCase();
       //alert(ua)
-      if (ua.match(/iphone/i)) {
+      if (!ua.match(/iphone/i)) {
        alert('not sp');
        aEl.setAttribute('download', 'test2.txt');
       } else {
