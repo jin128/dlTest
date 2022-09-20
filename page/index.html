@@ -7,7 +7,7 @@
 
 </head>
 <body>
-  <h3>test ver3.4<h3>
+  <h3>test ver3.5<h3>
   <div>
     <button style="width=60px; height=30px;" id='b1' type="button" onclick="a()">setAtt</button>
   </div>
@@ -17,18 +17,18 @@
   
   <script>
     function a() {
-      //alert(1);
-      const blob = new Blob(['hoge', { type: 'text/plain'});
-      let aEl = document.createElement('a');
-      aEl.href = window.URL.createObjectURL(blob);
+      alert(1);
+      //const blob = new Blob(['hoge', { type: 'text/plain'});
+      //let aEl = document.createElement('a');
+      //aEl.href = window.URL.createObjectURL(blob);
   
-      aEl.download = 'test.txt';
+      //aEl.download = 'test.txt';
       
-      document.body.appebdChild(aEl);
+      //document.body.appebdChild(aEl);
   
-      aEl.click();
+      //aEl.click();
   
-      document.body.removeChild(aEl);
+      //document.body.removeChild(aEl);
     }
 
     function b() {
