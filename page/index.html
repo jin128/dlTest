@@ -7,7 +7,7 @@
 
 </head>
 <body>
-  <h3>test ver3.13<h3>
+  <h3>test ver3.14<h3>
   <div>
     <button style="width=60px; height=30px;" id='b1' type="button" onclick="a()">setAtt</button>
   </div>
@@ -31,7 +31,7 @@ function a() {
       }
   
       const blob = new Blob([buffer.buffer], {type: 'application/pdf'})
-      let file = new File([blob], 'test.pdf', {type: 'application'})
+      let file = new File([blob], 'test.pdf', {type: 'application/pdf'})
   
       let aEl = document.createElement('a');
       aEl.href = window.URL.createObjectURL(file);
@@ -53,7 +53,7 @@ function a() {
       }
   
       const blob = new Blob([buffer.buffer], {type: 'application/pdf'})
-      let file = new File([blob], 'test.pdf', {type: 'application'})
+      let file = new File([blob], 'test.pdf', {type: 'application/pdf'})
       
       let aEl = document.createElement('a');
       aEl.href = window.URL.createObjectURL(blob);
@@ -76,7 +76,7 @@ function a() {
       }
   
       const blob = new Blob([buffer.buffer], {type: 'application/pdf'})
-      let file = new File([blob], 'test.pdf', {type: 'application'})
+      let file = new File([blob], 'test.pdf', {type: 'application/pdf'})
       
       let aEl = document.createElement('a');
       aEl.href = window.URL.createObjectURL(file);
@@ -84,12 +84,12 @@ function a() {
       let ua = window.navigator.userAgent.toLowerCase(); 
       let isIOs = ua.match(/iphone/i) || ua.match(/ipad/i)
       let isSafari = ua.match(/safari/i) && !ua.match(/crios/i)
-      //if (isSafari && isIOs) {
-        //aEl.target = '_blank';
-        //aEl.rel = 'noopener noreferrer';
-      //} else {
-       // aEl.setAttribute('download', 'test3.pdf');
-      //}
+      if (isSafari && isIOs) {
+        aEl.target = '_blank';
+        aEl.rel = 'noopener noreferrer';
+      } else {
+        aEl.setAttribute('download', 'test3.pdf');
+      }
   
       document.body.appendChild(aEl);
       aEl.click();
