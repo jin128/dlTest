@@ -6,6 +6,7 @@
 <title>DL test</title>
 <script type='text/javascript'>
 function a() {
+  alert(1)
   const bolb = new Blob(['hoge', { type: 'text/plain'});
   let aEl = document.createElement('a');
   aEl.href = window.URL.createdObjectURL(blob)
@@ -21,6 +22,7 @@ function a() {
 }
 
 function b() {
+  alert(2)
   const bolb = new Blob(['hoge', { type: 'text/plain'});
   let aEl = document.createElement('a');
   aEl.href = window.URL.createdObjectURL(blob)
@@ -37,12 +39,12 @@ function b() {
 </script>
 </head>
 <body>
-  <h3>test ver3.1<h3>
+  <h3>test ver3.2<h3>
   <div>
-    <button id='b1' type="button" onclick="a()">setAtt</button>
+    <button style="width=60px; height=30px;" id='b1' type="button" onclick="a()">setAtt</button>
   </div>
   <div>
-    <button id='b2' type="button" onclick="b()">not set</button>
+    <button style="width=60px; height=30px;" id='b2' type="button" onclick="b()">not set</button>
   </div>
 </body>
 </html>
