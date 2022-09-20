@@ -4,17 +4,47 @@
 <meta charset="UTF-8"> 
 <meta http-equiv="content-language" content="ja"> 
 <title>DL test</title>
-<script src='../js/test.js'></script>
+<script >
+let a = function() {
+  const bolb = new Blob(['hoge', { type: 'text/plain'});
+  let aEl = document.createElement('a');
+  aEl.href = window.URL.createdObjectURL(blob)
+  
+  aEl.download = 'test.txt';
+  // aEl.setAttribute('download', 'test.txt')
+  
+  document.body.appebdChild(aEl);
+  
+  aEl.click()
+  
+  document.body.removeChild(aEl);
+}
+
+let b = function() {
+  const bolb = new Blob(['hoge', { type: 'text/plain'});
+  let aEl = document.createElement('a');
+  aEl.href = window.URL.createdObjectURL(blob)
+  
+  //aEl.download = 'test.txt';
+  aEl.setAttribute('download', 'test.txt')
+  
+  document.body.appebdChild(aEl);
+  
+  aEl.click()
+  
+  document.body.removeChild(aEl);
+}  
+</script>
 </head>
 <body>
-  <h3>test ver1<h3>
+  <h3>test ver2<h3>
   <div>
-    <p>download</p>
-    <a>dl</a>
+    <p onclick="a()">download</p>
+    
   </div>
   <div>
-    <p>move</p>
-    <a>dl</a>
+    <p  onclick="b()">move</p>
+    
   </div>
 </body>
 </html>
