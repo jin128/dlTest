@@ -5,7 +5,7 @@
 <meta http-equiv="content-language" content="ja"> 
 <title>DL test</title>
 <script type='text/javascript'>
-let a = function() {
+function a() {
   const bolb = new Blob(['hoge', { type: 'text/plain'});
   let aEl = document.createElement('a');
   aEl.href = window.URL.createdObjectURL(blob)
@@ -20,7 +20,7 @@ let a = function() {
   document.body.removeChild(aEl);
 }
 
-let b = function() {
+function b() {
   const bolb = new Blob(['hoge', { type: 'text/plain'});
   let aEl = document.createElement('a');
   aEl.href = window.URL.createdObjectURL(blob)
@@ -39,12 +39,10 @@ let b = function() {
 <body>
   <h3>test ver3.1<h3>
   <div>
-    <p onclick="a()">download</p>
-    
+    <button id='b1' type="button" onclick="a()">setAtt</button>
   </div>
   <div>
-    <p  onclick="b()">move</p>
-    
+    <button id='b2' type="button" onclick="b()">not set</button>
   </div>
 </body>
 </html>
