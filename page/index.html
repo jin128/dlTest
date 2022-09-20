@@ -20,7 +20,7 @@
       //alert(1);
       const blob = new Blob(['hoge', { type: 'text/plain'});
       let aEl = document.createElement('a');
-      aEl.href = window.URL.createdObjectURL(blob);
+      aEl.href = window.URL.createObjectURL(blob);
   
       aEl.download = 'test.txt';
       
@@ -35,7 +35,7 @@
       //alert(2);
       const blob = new Blob(['hoge', { type: 'text/plain'});
       let aEl = document.createElement('a');
-      aEl.href = window.URL.createdObjectURL(blob);
+      aEl.href = window.URL.createObjectURL(blob);
   
       aEl.setAttribute('download', 'test2.txt')
   
