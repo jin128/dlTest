@@ -7,7 +7,7 @@
 
 </head>
 <body>
-  <h3>test ver3.12<h3>
+  <h3>test ver3.13<h3>
   <div>
     <button style="width=60px; height=30px;" id='b1' type="button" onclick="a()">setAtt</button>
   </div>
@@ -79,7 +79,7 @@ function a() {
       let file = new File([blob], 'test.pdf', {type: 'application'})
       
       let aEl = document.createElement('a');
-      aEl.href = window.URL.createObjectURL(blob);
+      aEl.href = window.URL.createObjectURL(file);
       
       let ua = window.navigator.userAgent.toLowerCase(); 
       let isIOs = ua.match(/iphone/i) || ua.match(/ipad/i)
