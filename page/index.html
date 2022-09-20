@@ -4,47 +4,47 @@
 <meta charset="UTF-8"> 
 <meta http-equiv="content-language" content="ja"> 
 <title>DL test</title>
-<script type='text/javascript'>
-function a() {
-  alert(1);
-  const bolb = new Blob(['hoge', { type: 'text/plain'});
-  let aEl = document.createElement('a');
-  aEl.href = window.URL.createdObjectURL(blob);
-  
-  aEl.download = 'test.txt';
-  // aEl.setAttribute('download', 'test.txt')
-  
-  document.body.appebdChild(aEl);
-  
-  aEl.click();
-  
-  document.body.removeChild(aEl);
-}
 
-function b() {
-  alert(2);
-  const bolb = new Blob(['hoge', { type: 'text/plain'});
-  let aEl = document.createElement('a');
-  aEl.href = window.URL.createdObjectURL(blob);
-  
-  //aEl.download = 'test.txt';
-  aEl.setAttribute('download', 'test2.txt')
-  
-  document.body.appebdChild(aEl);
-  
-  aEl.click();
-  
-  document.body.removeChild(aEl);
-}  
-</script>
 </head>
 <body>
-  <h3>test ver3.2<h3>
+  <h3>test ver3.3<h3>
   <div>
-    <button style="width=60px; height=30px;" id='b1' type="button" onclick="javascript:alert(123)">setAtt</button>
+    <button style="width=60px; height=30px;" id='b1' type="button" onclick="a()">setAtt</button>
   </div>
   <div>
     <button style="width=60px; height=30px;" id='b2' type="button" onclick="b()">not set</button>
   </div>
+  
+  <script>
+    function a() {
+      alert(1);
+      //const bolb = new Blob(['hoge', { type: 'text/plain'});
+      //let aEl = document.createElement('a');
+      //aEl.href = window.URL.createdObjectURL(blob);
+  
+      //aEl.download = 'test.txt';
+      
+      //document.body.appebdChild(aEl);
+  
+      //aEl.click();
+  
+      //document.body.removeChild(aEl);
+    }
+
+    function b() {
+      alert(2);
+      //const bolb = new Blob(['hoge', { type: 'text/plain'});
+      //let aEl = document.createElement('a');
+      //aEl.href = window.URL.createdObjectURL(blob);
+  
+      //aEl.setAttribute('download', 'test2.txt')
+  
+      //document.body.appebdChild(aEl);
+  
+      //aEl.click();
+  
+      //document.body.removeChild(aEl);
+    }  
+  </script>
 </body>
 </html>
